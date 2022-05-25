@@ -10,14 +10,8 @@ def create(name: str):
     __create__(sys.executable, name)
 
 @app.command()
-def goodbye(name: str, formal: bool = False):
-    if formal:
-        typer.echo(f"Goodbye Ms. {name}. Have a good day.")
-    else:
-        typer.echo(f"Bye {name}!")
+def run(script: str):
+    script
 
 def main():
     app()
-
-if __name__ == '__main__':
-    main()
